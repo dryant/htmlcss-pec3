@@ -318,7 +318,7 @@ article a.more:before {
     grid-template-columns: repeat(3, 1fr);
 }
 #aplicaciones article {
-    background: #eee;
+    background: rgb(244, 246, 247);
     padding: 20px;
     min-height: 240px;
     position: relative;
