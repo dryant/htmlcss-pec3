@@ -1,0 +1,326 @@
+/*********************************************
+*          Estilos RESET
+**********************************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+blockquote, q {
+    quotes: none;
+    margin-bottom: 10px 
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/************* Fin RESET *************/
+/*********************************************
+*          Estilos GENERALES
+**********************************************/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    line-height: 1.6rem;
+}
+a {
+    color: rgb(222,35,51);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.container, section.intro, section.noticias {
+    /*! width: 100%; */
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+}
+h2 {
+    font-size:1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0;
+}
+p {
+    line-height: 1.4rem;
+}
+/************* Fin GENERALES *************/
+/*********************************************
+*          Estilos HEADER
+**********************************************/
+
+header {
+    width: 100%;
+    background: #fff;
+}
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 700;
+}
+header a:hover {
+    color:  rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+header a.active {
+    color: rgb(222,35,51);
+}
+.logo {
+    font-size: 2.4rem;
+}
+.logo span {
+    font-weight: bold;
+}
+nav ul li {
+    display: inline-block;
+    padding: 15px 15px 5px 0;
+}
+@media (max-width:900px){
+    header .container nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.4rem;
+        margin-top: 25px;
+    }
+    header .container nav ul li {
+        padding: 0;
+    }
+    ul, p {
+        line-height: 1.2rem;
+    }
+}
+/************* Fin HEADER *************/
+
+/*********************************************
+*          Estilos FOOTER
+**********************************************/
+
+footer {
+    width: 100%;
+    background: black;
+    color: #fff;
+    font-size: 12px;
+}
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+footer a:hover {
+    color: rgb(222,35,51);
+    text-decoration: none;
+}
+.menu ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+    /* padding-right: 15px; */
+}
+
+.menu li {
+    margin-right: 15px;
+}
+.menu li:not(:last-child)::after {
+    content: "·";
+    padding-left: 15px;
+}
+footer p:first-of-type {
+    margin-top: 15px;
+}
+footer nav ul li {
+    padding-right: 0px;
+}
+footer .rrss img {
+    width: 20px;
+}
+nav.rrss ul li {
+    padding-top: 0 !important;
+}
+@media (max-width:900px){
+    nav.menu ul, nav.rrss ul {
+        display: flex;
+        justify-content: center;
+    }
+    nav.menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+    .menu li:not(:last-child)::after {
+        content: inherit;
+        padding-left: 15px;
+    }
+    nav.menu ul li {
+        padding: 0;
+    }
+    .menu li {
+        margin-right: 0;
+    }
+    footer p, header p {
+        text-align: center;
+    }
+}
+/************* Fin FOOTER *************/
+/*********************************************
+*          Estilos INDEX
+**********************************************/
+#index section:first-of-type {
+    background-image: url('../img/bg-hero-home.jpg');
+    background-position:top;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#index section:first-of-type h1{
+    font-size: 2.6rem;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    line-height: 2.8rem;
+    color: #fff;
+}
+#index h2 {
+    font-size: 18px;
+}
+.intro p {
+    max-width: 65%;
+    margin: 15px auto;    
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+#index section.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+#index section.noticias article {
+    flex: 200px;
+    max-width: 280px;
+    gap: 20px;
+}
+article img {
+    width: auto;
+    max-width: 280px;
+}
+#index section.noticias h2 {
+    font-size: 1.1 rem;
+    text-align: left;
+}
+#index section.noticias article a.more:before {
+    content: "> ";
+}
+#index section.noticias article a.more {
+    font-size: 12px;
+}
+/* Estilos solo para móvil */
+@media (max-width:450px){
+    
+}
+/* Estilos para que las noticias se adapten a tablets */
+@media (max-width:900px) AND (min-width:651px){
+    #index section.noticias article {
+        flex: 200px;
+        max-width: 200px;
+        gap: 0px;
+    }
+    .noticias article img {
+        width: auto;
+        max-width: 200px;
+    }
+}
+/* Estilos para que las noticias cambien a vertical en cuanto no caben horizontal
+   (Aunque no sea un movil todavía) */
+@media (max-width: 650px) {
+    #index section.noticias {
+        flex-direction: column;
+    }
+    #index section.noticias article {
+        width: 100%;
+        flex: 200px;
+        max-width: 100%;
+        gap: 20px;
+    }
+    .noticias article img {
+        width: auto;
+        max-width: 100%;
+    }
+    section.noticias {
+        padding: 40px;
+    }
+    article h2 {
+        font-size: 32px;
+    }
+    h2:first-of-type {
+        margin-bottom: 35px
+    }
+    article h2 {
+        font-size: 32px;
+    }
+    ul {
+        line-height: 1.2rem;
+    }
+}
+/* Estilos comunes para tablets y moviles */
+@media (max-width:900px){
+    #index section:first-of-type {
+        background-image: url('../img/bg-hero-home-m.jpg');
+    }
+    #index section.noticias {
+        flex-wrap: nowrap;
+    }
+    #index section.intro h2, #index h2 {
+        font-size: 1.4rem;
+    }
+    #index section.noticias h2 {
+        font-size: 1.2rem;
+    }
+    .intro p {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+}
+/************* Fin INDEX *************/
+/*********************************************
+*          Estilos APLICACIONES
+**********************************************/
+
+
+
+/************* Fin APLICACIONES *************/
+/*********************************************
+*          Estilos NOTICIAS
+**********************************************/
+
+
+
+/************* Fin NOTICIAS *************/
+/*********************************************
+*          Estilos EN EL CINE
+**********************************************/
+
+
+
+/************* Fin EN EL CINE *************/
