@@ -306,8 +306,12 @@ article img {
 /*********************************************
 *          Estilos APLICACIONES
 **********************************************/
-
-
+#aplicaciones .articulos {
+    
+}
+#aplicaciones article {
+    background: #eee;
+}
 
 /************* Fin APLICACIONES *************/
 /*********************************************
