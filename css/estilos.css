@@ -57,7 +57,7 @@ h2 {
     font-size:1.6rem;
     font-weight: 700;
     text-align: center;
-    margin: 15px 0;
+    /*! margin: 15px 0; */
 }
 p {
     line-height: 1.4rem;
@@ -371,6 +371,17 @@ article a.more:before {
     grid-template-columns: 2fr 1fr;
     grid-gap: 60px;
 }
+@media (max-width:900px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-gap: 60px;
+    }
+    aside {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
 #despacho nav ul li {
     padding: 0;
 }
@@ -404,6 +415,10 @@ article a.more:before {
 .breadcrumb li:last-of-type {
     color: rgb(222,35,51);
 }
+#despacho .breadcrumb ul li a {
+    font-weight: 400;
+    font-style: normal;
+}
 #despacho article {
     margin-bottom: 25px;
 }
@@ -426,7 +441,6 @@ article picture {
 }
 #despacho h2 {
     font-size: 20px;
-    margin: 25px 0;
 }
 #despacho h1, #despacho h2 {
     font-weight: 700;
@@ -455,6 +469,15 @@ p.referencia a {
     background-color: rgb(244, 246, 247); 
     padding: 25px;
     margin-bottom: 30px;
+}
+@media (max-width:600px) {
+    .about {
+        grid-template-columns: auto;
+    }
+    aside {
+        max-width: 100%;
+        margin: auto;
+    }
 }
 .about .logo-col img {
     max-width: 65px;
@@ -506,6 +529,35 @@ input[type="submit"] {
 	padding: 8px 10px;
 	text-transform: uppercase;
 	color: #ffffff;
+}
+aside p.h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+ul.related {
+    margin-top: 28px;
+}
+.related li {
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    gap: 15px;
+    border-bottom: solid 1px rgb(220, 220, 220);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.related img {
+    max-width: 80px;
+    border-radius: 50%;
+}
+#despacho .excerpt > h2.h4 {
+    margin: 5px 0 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1rem;
+}
+
+#despacho .excerpt time {
+    font-size: 12px;
 }
 /************* Fin NOTICIAS *************/
 /*********************************************
