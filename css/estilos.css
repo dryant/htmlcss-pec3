@@ -34,10 +34,12 @@ table {
 /*********************************************
 *          Estilos GENERALES
 **********************************************/
+html {
+    font-size: 16px;
+}
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
 }
 a {
     color: rgb(222,35,51);
@@ -61,6 +63,7 @@ h2 {
 }
 p {
     line-height: 1.4rem;
+    font-size: 1rem;
 }
 /************* Fin GENERALES *************/
 /*********************************************
@@ -70,6 +73,9 @@ p {
 header {
     width: 100%;
     background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 header a {
     color: rgb(0, 0, 0);
@@ -86,8 +92,8 @@ header a.active {
 header {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
-.logo {
-    font-size: 2.4rem;
+.logo p{
+    font-size: 3rem;
 }
 .logo span {
     font-weight: bold;
@@ -208,7 +214,7 @@ nav.rrss ul li {
     color: #fff;
 }
 #index h2 {
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 .intro p {
     max-width: 65%;
@@ -227,16 +233,20 @@ nav.rrss ul li {
     max-width: 280px;
     gap: 20px;
 }
-#index article img {
+#index article figure img {
     width: auto;
     max-width: 280px;
 }
-#index section.noticias h2 {
-    font-size: 1.1 rem;
+#index section.noticias article h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
     text-align: left;
 }
 article a.more:before {
     content: "> ";
+}
+#index article figure {
+    margin: 20px 0;
 }
 #index section.noticias article a.more {
     font-size: 12px;
@@ -252,7 +262,7 @@ article a.more:before {
         max-width: 200px;
         gap: 0px;
     }
-    .noticias article img {
+    #index section.noticias article figure img {
         width: auto;
         max-width: 200px;
     }
@@ -273,14 +283,20 @@ article a.more:before {
         width: auto;
         max-width: 100%;
     }
+    #index section.noticias article figure img, #index section.noticias article figure figcaption {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
     section.noticias {
-        padding: 40px;
+        padding: 5px 40px 40px;
     }
     article h2 {
         font-size: 32px;
     }
     h2:first-of-type {
-        margin-bottom: 35px
+        margin-bottom: 5px
     }
     article h2 {
         font-size: 32px;
@@ -344,21 +360,25 @@ article a.more:before {
 @media (max-width: 900px) {
     #aplicaciones .articulos {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
         gap: 25px;
     }
     #aplicaciones article {
         min-height: 220px;
+    }
+    body, #aplicaciones {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 650px) {
     #aplicaciones .articulos {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 1fr);
     }
     #aplicaciones article {
         min-height: 210px;
+    }
+    body, #aplicaciones {
+        max-width: 100%;
     }
 }
 /************* Fin APLICACIONES *************/
@@ -422,12 +442,12 @@ article a.more:before {
 #despacho article {
     margin-bottom: 25px;
 }
-#despacho article picture img {
+#despacho article figure img {
     display: block;
     max-width: 100%;
     margin-bottom: 15px;
 }
-article picture {
+#despacho article figure {
     width: 100%;
     font-size: 12px;
 }
@@ -582,15 +602,21 @@ ul.related {
     min-height: 240px;
     margin-bottom:20px;
 }
-#cine article p {
-    padding: 5px 10px 25px;
-    
+#cine article .resumen {
+    padding: 15px;
 }
-#cine article p span{
+#cine article p {
+    padding: 5px 10px 25px 0;
+    display: inline;
+}
+#cine article h2 {
     font-weight: 700;
     font-style: italic;
+    display: inline;
+    font-size: 1rem;
 }
 #cine iframe {
+    width: 100%;
     min-height: 280px;
     height: auto;
 }
