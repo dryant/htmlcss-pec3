@@ -1,5 +1,30 @@
 /*********************************************
-*          Estilos RESET
+*          Índice
+**********************************************
+
+1 - RESET
+2 - ESTILOS GENERALES
+3 - HEADER
+	3.1 - Header móvil y tablet
+4 - FOOTER
+	4.1 - Footer móvil y tablet
+5 - INDEX
+	5.1 - Index tablet
+	5.2 - Index tablet sm
+	5.3 - Index móvil
+6 - APLICACIONES
+	6.1 - Aplicaciones tablet
+    6.2 - Aplicaciones móvil 
+7 - DESPACHO 42
+	7.1 - Despacho 42 y tablet
+	7.2 - Despacho 42 móvil
+8 - EN EL CINE
+	8.1 - En el cine tablet
+	8.2 - En el cine móvil
+**********************************************/
+
+/*********************************************
+*          1 - Estilos RESET
 **********************************************/
 
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
@@ -32,7 +57,7 @@ table {
 }
 /************* Fin RESET *************/
 /*********************************************
-*          Estilos GENERALES
+*          2 - Estilos GENERALES
 **********************************************/
 html {
     font-size: 16px;
@@ -50,7 +75,6 @@ a:hover {
     text-decoration: underline;
 }
 .container, section.intro, section.noticias {
-    /*! width: 100%; */
     max-width: 1080px;
     margin: auto;
     padding: 20px;
@@ -59,7 +83,6 @@ h2 {
     font-size:1.6rem;
     font-weight: 700;
     text-align: center;
-    /*! margin: 15px 0; */
 }
 p {
     line-height: 1.4rem;
@@ -67,7 +90,7 @@ p {
 }
 /************* Fin GENERALES *************/
 /*********************************************
-*          Estilos HEADER
+*          3 - Estilos HEADER
 **********************************************/
 
 header {
@@ -105,6 +128,7 @@ nav ul li {
 .logo a p {
     font-weight: normal;
 }
+/* 3.1 - Header móvil y tablet */
 @media (max-width:900px){
     header .container nav ul {
         display: flex;
@@ -123,7 +147,7 @@ nav ul li {
 /************* Fin HEADER *************/
 
 /*********************************************
-*          Estilos FOOTER
+*          4 - Estilos FOOTER
 **********************************************/
 
 footer {
@@ -145,7 +169,6 @@ footer a:hover {
     justify-content: flex-start;
     list-style-type: none;
     padding: 0;
-    /* padding-right: 15px; */
 }
 
 .menu li {
@@ -167,6 +190,10 @@ footer .rrss img {
 nav.rrss ul li {
     padding-top: 0 !important;
 }
+.rrss li a:hover {
+    opacity: 0.7;
+}
+/* 4.1 - Footer móvil y tablet */ 
 @media (max-width:900px){
     nav.menu ul, nav.rrss ul {
         display: flex;
@@ -216,6 +243,9 @@ nav.rrss ul li {
 #index h2 {
     font-size: 1.2rem;
 }
+#index .noticias a:hover {
+    text-decoration: none;
+}
 .intro p {
     max-width: 65%;
     margin: 15px auto;    
@@ -251,11 +281,8 @@ article a.more:before {
 #index section.noticias article a.more {
     font-size: 12px;
 }
-/* Estilos solo para móvil */
-@media (max-width:450px){
-    
-}
-/* Estilos para que las noticias se adapten a tablets */
+
+/* 5.1 - Index tablet */
 @media (max-width:900px) AND (min-width:651px){
     #index section.noticias article {
         flex: 200px;
@@ -267,8 +294,10 @@ article a.more:before {
         max-width: 200px;
     }
 }
-/* Estilos para que las noticias cambien a vertical en cuanto no caben horizontal
+/* 	5.2 - Index tablet sm
+	Estilos para que las noticias cambien a vertical en cuanto no caben horizontal
 (Aunque no sea un movil todavía) */
+
 @media (max-width: 650px) {
     #index section.noticias {
         flex-direction: column;
@@ -305,7 +334,7 @@ article a.more:before {
         line-height: 1.2rem;
     }
 }
-/* Estilos comunes para tablets y moviles */
+/* 5.3 - Index móvil */
 @media (max-width:900px){
     #index section:first-of-type {
         background-image: url('../img/bg-hero-home-m.jpg');
@@ -326,7 +355,7 @@ article a.more:before {
 }
 /************* Fin INDEX *************/
 /*********************************************
-*          Estilos APLICACIONES
+*          6 - Estilos APLICACIONES
 **********************************************/
 #aplicaciones .articulos {
     display: grid;
@@ -357,6 +386,10 @@ article a.more:before {
     text-align: left;
     margin-bottom: 35px;
 }
+#aplicaciones a.more:hover {
+    text-decoration: none;
+}
+/* 6.1 - Aplicaciones tablet */
 @media (max-width: 900px) {
     #aplicaciones .articulos {
         grid-template-columns: repeat(2, 1fr);
@@ -369,7 +402,7 @@ article a.more:before {
         max-width: 100%;
     }
 }
-
+/* 6.2 - Aplicaciones móvil */
 @media (max-width: 650px) {
     #aplicaciones .articulos {
         grid-template-columns: 1fr;
@@ -383,7 +416,7 @@ article a.more:before {
 }
 /************* Fin APLICACIONES *************/
 /*********************************************
-*          Estilos NOTICIAS
+*          7 - Estilos Despacho 42
 **********************************************/
 
 .content {
@@ -391,6 +424,7 @@ article a.more:before {
     grid-template-columns: 2fr 1fr;
     grid-gap: 60px;
 }
+/* 7.1 - Despacho 42 y tablet */
 @media (max-width:900px) {
     .content {
         grid-template-columns: 1fr;
@@ -490,6 +524,7 @@ p.referencia a {
     padding: 25px;
     margin-bottom: 30px;
 }
+/* 7.2 - Despacho 42 móvil */
 @media (max-width:600px) {
     .about {
         grid-template-columns: auto;
@@ -581,7 +616,7 @@ ul.related {
 }
 /************* Fin NOTICIAS *************/
 /*********************************************
-*          Estilos EN EL CINE
+*          8 - Estilos EN EL CINE
 **********************************************/
 
 #cine h1{
@@ -620,6 +655,7 @@ ul.related {
     min-height: 280px;
     height: auto;
 }
+/* 8.1 - En el cine tablet */
 @media (max-width: 900px) and (min-width:651px){
     #cine .videos {
         grid-template-columns: 1fr;
@@ -628,6 +664,7 @@ ul.related {
         min-height: 425px;
     }
 }
+/* 8.2 - En el cine móvil */
 @media (max-width: 650px) {
     #cine .videos {
         grid-template-columns: 1fr;
